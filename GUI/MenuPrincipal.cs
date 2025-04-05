@@ -27,16 +27,16 @@ namespace GUI
                 switch (opcion)
                 {
                     case "1":
-                        propietarioGUI.RegistrarPropietario();
+                        //propietarioGUI.RegistrarPropietario();
                         break;
                     case "2":
-                        mascotaGUI.RegistrarMascota();
+                        //mascotaGUI.RegistrarMascota();
                         break;
                     case "3":
                         consultaVeterinariaGUI.RegistrarConsulta();
                         break;
                     case "4":
-                        mascotaGUI.ConsultarMascotasPorPropietario();
+                        //mascotaGUI.ConsultarMascotasPorPropietario();
                         break;
                     case "5":
                         consultaVeterinariaGUI.ConsultarHistorialMascota();

@@ -2,6 +2,7 @@
 using ENTITY;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,20 @@ namespace BLL
 
         public List<ConsultaVeterinaria> Consultar()
         {
-            return _repo.Consultar();
+            try
+            {
+                var lista = _repo.Consultar();
+                if (lista != null)
+                {
+                    return lista;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         public bool Eliminar(int id)

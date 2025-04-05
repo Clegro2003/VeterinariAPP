@@ -16,16 +16,24 @@ namespace ENTITY
 
         public override List<ConsultaVeterinaria> Consultar()
         {
+
+
             try
             {
-                List<ConsultaVeterinaria> lista = new List<ConsultaVeterinaria>();
-
-                StreamReader sr = new StreamReader(Archivos.ARC_CONSULTAVETERINARIA);
-                while (!sr.EndOfStream)
+                if (File.Exists(Archivos.ARC_CONSULTAVETERINARIA))
                 {
-                    lista.Add(Map(sr.ReadLine()));
+                    List<ConsultaVeterinaria> lista = new List<ConsultaVeterinaria>();
+
+                    StreamReader sr = new StreamReader(Archivos.ARC_CONSULTAVETERINARIA);
+                    while (!sr.EndOfStream)
+                    {
+                        lista.Add(Map(sr.ReadLine()));
+                    }
+                    return lista;
                 }
-                return lista;
+
+                return null;
+                
             }
             catch (Exception)
             {

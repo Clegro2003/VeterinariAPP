@@ -9,8 +9,8 @@ namespace GUI
 {
     public class ConsultaVeterinariaGUI
     {
-        private readonly ConsultaVeterinariaSevice consultaService;
-        private readonly MascotaService mascotaService;
+        private readonly ConsultaVeterinariaSevice consultaService = new ConsultaVeterinariaSevice();
+        private readonly MascotaService mascotaService = new MascotaService();
 
         public void RegistrarConsulta()
         {
@@ -40,7 +40,7 @@ namespace GUI
             //string nombreMascota = Console.ReadLine();
 
             var historial = consultaService.Consultar();
-            if (historial.Count() == 0)
+            if (historial == null)
             {
                 Console.WriteLine("No hay consultas registradas para esta mascota.");
             }
@@ -49,7 +49,7 @@ namespace GUI
                 Console.WriteLine("Historial de consultas:");
                 foreach (var consulta in historial)
                 {
-                    Console.WriteLine($"- {consulta.Fecha}: {consulta.Diagnostico} (Tratamiento: {consulta.Tratamiento})");
+                    Console.WriteLine($"{consulta.Fecha} || {consulta.Diagnostico} || (Tratamiento: {consulta.Tratamiento})");
                 }
             }
         }

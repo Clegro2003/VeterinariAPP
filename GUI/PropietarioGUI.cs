@@ -9,23 +9,22 @@ namespace GUI
 {
     public class PropietarioGUI
     {
-        private ServicePropietario servicePropietario = new ServicePropietario();
+        //private ServicePropietario servicePropietario = new ServicePropietario();
 
-        public void RegistrarPropietario()
-        {
-            Console.WriteLine("\n=== Registro de Propietario ===");
-            Console.Write("Nombre: ");
-            string nombre = Console.ReadLine();
-            Console.Write("Cédula: ");
-            string cedula = Console.ReadLine();
-            Console.Write("Teléfono: ");
-            string telefono = Console.ReadLine();
+        //public void RegistrarPropietario()
+        //{
+        //    Console.WriteLine("\n=== Registro de Propietario ===");
+        //    Console.Write("Nombre: ");
+        //    string nombre = Console.ReadLine();
+        //    Console.Write("Cédula: ");
+        //    string cedula = Console.ReadLine();
+        //    Console.Write("Teléfono: ");
+        //    string telefono = Console.ReadLine();
 
-            Propietario propietario = new Propietario(nombre, cedula, telefono);
-            string resultado = servicePropietario.AgregarPropietario(propietario);
+        //    Propietario propietario = new Propietario(nombre, cedula, telefono);
+        //    string resultado = servicePropietario.AgregarPropietario(propietario);
 
-            Console.WriteLine(resultado);
-        }
+        //    Console.WriteLine(resultado);
+        //}
     }
-}
 }
