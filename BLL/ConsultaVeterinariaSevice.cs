@@ -18,21 +18,8 @@ namespace BLL
         }
 
         public List<ConsultaVeterinaria> Consultar()
-        {
-            try
-            {
-                var lista = _repo.Consultar();
-                if (lista != null)
-                {
-                    return lista;
-                }
-                return null;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
+        {    
+            return _repo.Consultar();
         }
 
         public bool Eliminar(int id)
