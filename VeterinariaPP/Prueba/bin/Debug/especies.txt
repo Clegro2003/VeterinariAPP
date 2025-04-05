@@ -1,0 +1,4 @@
+1;caninos
+2;felinos
+4;otra especie
+3;aves

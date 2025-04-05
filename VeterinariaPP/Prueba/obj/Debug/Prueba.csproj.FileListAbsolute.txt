@@ -1,0 +1,12 @@
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\Prueba.exe.config
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\Prueba.exe
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\Prueba.pdb
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\obj\Debug\Prueba.csproj.AssemblyReference.cache
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\obj\Debug\Prueba.csproj.CoreCompileInputs.cache
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\obj\Debug\Prueba.exe
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\obj\Debug\Prueba.pdb
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\DAL.dll
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\ENTITY.dll
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\DAL.pdb
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\bin\Debug\ENTITY.pdb
+D:\UNICESAR-2025\ICFES\CODE\VeterinariaPP\Prueba\obj\Debug\Prueba.csproj.Up2Date
