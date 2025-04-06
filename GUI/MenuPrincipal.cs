@@ -21,7 +21,8 @@ namespace GUI
             while (continuar)
             {
                 MostrarMenu();
-                string opcion = Console.ReadLine();
+
+               Console.SetCursorPosition(73, 19); string opcion = Console.ReadLine();
 
                 switch (opcion)
                 {
@@ -56,14 +57,15 @@ namespace GUI
 
         private void MostrarMenu()
         {
-            Console.WriteLine("=== Sistema de Gestión de Mascotas - VetVida ===");
-            Console.WriteLine("1. Registrar Propietario");
-            Console.WriteLine("2. Registrar Mascota");
-            Console.WriteLine("3. Registrar Consulta Veterinaria");
-            Console.WriteLine("4. Consultar Mascotas por Propietario");
-            Console.WriteLine("5. Consultar Historial de Consultas de una Mascota");
-            Console.WriteLine("6. Salir");
-            Console.Write("Seleccione una opción: ");
+            Console.SetCursorPosition(50, 12); Console.WriteLine("=== Sistema de Gestión de Mascotas - VetVida ===".ToUpper());
+            Console.SetCursorPosition(50, 13); Console.WriteLine("1. Registrar Propietario");
+            Console.SetCursorPosition(50, 14); Console.WriteLine("2. Registrar Mascota");
+            Console.SetCursorPosition(50, 15); Console.WriteLine("3. Registrar Consulta Veterinaria");
+            Console.SetCursorPosition(50, 16); Console.WriteLine("4. Consultar Mascotas por Propietario");
+            Console.SetCursorPosition(50, 17); Console.WriteLine("5. Consultar Historial de Consultas de una Mascota");
+            Console.SetCursorPosition(50, 18); Console.WriteLine("6. Salir");
+            Console.SetCursorPosition(50, 19); Console.Write("Seleccione una opción: ");
+
         }
     }
 

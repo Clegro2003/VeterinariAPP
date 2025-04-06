@@ -40,7 +40,7 @@ namespace DAL
             propietario.Cedula = int.Parse(partes[0]);
             propietario.Nombre = partes[1];
             propietario.Apellido = partes[2];
-            propietario.Telefono = long.Parse(partes[4]);
+            propietario.Telefono = long.Parse(partes[3]);
             return propietario;
         }
     }

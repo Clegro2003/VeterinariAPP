@@ -13,15 +13,26 @@ namespace GUI
 
         public void Consultar_Y_Mostrar()
         {
+            char eleccion = 'S';
 
+            while (eleccion == 'S' || eleccion == 's')
+            {
+                ConsultarPropietarios();
+                RegistrarPropietario();
+
+                Console.SetCursorPosition(50, 20);
+                Console.Write("¿Desea registrar otro propietario? (S/N): ");
+                eleccion = Console.ReadKey().KeyChar;
+                Console.Clear();
+            }
         }
 
         public void RegistrarPropietario()
         {
-            Console.Clear();
+            //Console.Clear();
 
             Propietario propietario = new Propietario();
-            Console.SetCursorPosition(50, 2); Console.WriteLine("=== REGISTRO DE PROPIETARIO ===");
+            //Console.SetCursorPosition(40, 2); Console.WriteLine("=== REGISTRO DE PROPIETARIO ===");
 
             Console.SetCursorPosition(20, 4); Console.Write("Cédula: ");
             Console.SetCursorPosition(40, 4); Console.Write("Nombre: ");
@@ -45,24 +56,27 @@ namespace GUI
                 lista = servicePropietario.Consultar();
             }
             Console.Clear();
-            Console.SetCursorPosition(10, 5); Console.Write("SISTEMAS DE PROCESAMIENTO DE PROPPIETARIOS");
+            Console.SetCursorPosition(40, 2); Console.Write("SISTEMAS DE PROCESAMIENTO DE PROPPIETARIOS");
             int i = 0;
             foreach (var item in lista)
             {
-                Console.SetCursorPosition(8, 8); Console.Write("Cedula");
-                Console.SetCursorPosition(15, 8); Console.Write("Nombre");
-                Console.SetCursorPosition(30, 8); Console.Write("Apellido");
-                Console.SetCursorPosition(48, 8); Console.Write("Telefono");
-                Console.SetCursorPosition(8, 9); Console.Write("-----------------------------------------------------------------");
-                Console.SetCursorPosition(8, 10 + i); Console.Write(item.Cedula);
-                Console.SetCursorPosition(18, 10 + i); Console.Write(item.Nombre);
-                Console.SetCursorPosition(39, 10 + i); Console.Write(item.Apellido);
-                Console.SetCursorPosition(54, 10 + i); Console.Write(item.Telefono);
+                Console.SetCursorPosition(20, 8); Console.Write("Cédula");
+                Console.SetCursorPosition(35, 8); Console.Write("Nombre");
+                Console.SetCursorPosition(50, 8); Console.Write("Apellido");
+                Console.SetCursorPosition(68, 8); Console.Write("Teléfono");
+
+                Console.SetCursorPosition(19, 9); Console.Write("======================================================================");
+
+                Console.SetCursorPosition(20, 10 + i); Console.Write(item.Cedula);
+                Console.SetCursorPosition(35, 10 + i); Console.Write(item.Nombre);
+                Console.SetCursorPosition(50, 10 + i); Console.Write(item.Apellido);
+                Console.SetCursorPosition(68, 10 + i); Console.Write(item.Telefono);
 
                 i++;
-
             }
-            Console.SetCursorPosition(8, 11 + i); Console.Write("-----------------------------------------------------------------");
+
+            Console.SetCursorPosition(19, 9 + i); Console.Write("======================================================================");
+            //Console.ReadKey();
         }
     }
 }

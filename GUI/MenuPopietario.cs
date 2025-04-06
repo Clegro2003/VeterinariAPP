@@ -21,14 +21,13 @@ namespace GUI
                 switch (opcion)
                 {
                     case "1":
-                        propietarioGUI.RegistrarPropietario();
+                        propietarioGUI.Consultar_Y_Mostrar();
+                        //propietarioGUI.RegistrarPropietario();
                         break;
                     case "2":
-                        propietarioGUI.ConsultarPropietarios();
+                        //propietarioGUI.ConsultarPropietarios();
                         break;
                     case "3":
-                        break;
-                    case "4":
                         continuar = false;
                         break;
                     default:
@@ -36,7 +35,6 @@ namespace GUI
                         Console.WriteLine("Opción no válida. Intente nuevamente.");
                         break;
                 }
-                Console.ReadKey();
                 Console.Clear();
             }
         }
@@ -45,9 +43,9 @@ namespace GUI
         {
             Console.Clear();
             Console.SetCursorPosition(50, 12); Console.WriteLine("=== Sistema de Gestión de Mascotas - VetVida ===".ToUpper());
-            Console.SetCursorPosition(50, 14); Console.Write("1. Registrar Propietario");
-            Console.SetCursorPosition(50, 16); Console.Write("2. Consultar Propietario");
-            Console.SetCursorPosition(50, 18); Console.Write("4. Salir");
+            Console.SetCursorPosition(50, 14); Console.Write("1. Registro y consulta de Propietarios");
+            Console.SetCursorPosition(50, 16); Console.Write("2. Eliminar Propietario");
+            Console.SetCursorPosition(50, 18); Console.Write("3. Salir");
             Console.SetCursorPosition(50, 20); Console.Write("Seleccione una opción: ");
         }
     }
