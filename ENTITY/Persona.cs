@@ -11,13 +11,13 @@ namespace ENTITY
         public int Cedula { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
 
         protected Persona()
         {
             
         }
 
-        public abstract string NombreCompleto();
+        public abstract override string ToString();
     }
 }

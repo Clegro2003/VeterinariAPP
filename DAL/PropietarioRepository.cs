@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -14,12 +11,26 @@ namespace DAL
 
         public override List<Propietario> Consultar()
         {
-            var lista = new List<Propietario>();
-            foreach (var linea in File.ReadAllLines(_filepath))
+            try
             {
-                lista.Add(Map(linea));
+                if (File.Exists(Archivos.ARC_PROPIETARIO))
+                {
+                    List<Propietario> list = new List<Propietario>();
+                    StreamReader sr = new StreamReader(_filepath);
+                    while (!sr.EndOfStream)
+                    {
+                        list.Add(Map(sr.ReadLine()));
+                    }
+                    sr.Close();
+                    return list;
+                }
+                return null;
             }
-            return lista;
+            catch (Exception e)
+            {
+                throw new Exception("Error al consultar propietarios", e);
+            }
+
         }
 
         public override Propietario Map(string dato)
@@ -28,7 +39,8 @@ namespace DAL
             Propietario propietario = new Propietario();
             propietario.Cedula = int.Parse(partes[0]);
             propietario.Nombre = partes[1];
-            propietario.Telefono = partes[2];
+            propietario.Apellido = partes[2];
+            propietario.Telefono = long.Parse(partes[4]);
             return propietario;
         }
     }

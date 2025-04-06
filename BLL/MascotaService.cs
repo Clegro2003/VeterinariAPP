@@ -12,8 +12,8 @@ namespace BLL
     public class MascotaService : IService<Mascota>
     {
         private readonly MascotaRepository _repo;
-        private readonly RazaRepository _Razarepo;
-        private readonly PropietarioRepository _Propietariorepo;
+        private readonly RazaRepository _Razarepo = new RazaRepository(Archivos.ARC_RAZA);
+        private readonly PropietarioRepository _Propietariorepo = new PropietarioRepository(Archivos.ARC_PROPIETARIO);
 
         public MascotaService()
         {

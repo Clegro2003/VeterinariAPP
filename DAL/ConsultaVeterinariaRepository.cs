@@ -26,7 +26,7 @@ namespace ENTITY
 
                     StreamReader sr = new StreamReader(Archivos.ARC_CONSULTAVETERINARIA);
                     while (!sr.EndOfStream)
-                    {
+                    {   
                         lista.Add(Map(sr.ReadLine()));
                     }
                     return lista;

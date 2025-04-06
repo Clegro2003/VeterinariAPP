@@ -11,8 +11,7 @@ namespace GUI
 {
     public class MenuPrincipal
     {
-        private PropietarioGUI propietarioGUI = new PropietarioGUI();
-        private MascotaGUI mascotaGUI = new MascotaGUI();
+        private readonly MenuPopietario menuPopietario = new MenuPopietario();
         private ConsultaVeterinariaGUI consultaVeterinariaGUI = new ConsultaVeterinariaGUI();
 
         public void Menu()
@@ -27,7 +26,7 @@ namespace GUI
                 switch (opcion)
                 {
                     case "1":
-                        //propietarioGUI.RegistrarPropietario();
+                        menuPopietario.Menu();
                         break;
                     case "2":
                         //mascotaGUI.RegistrarMascota();

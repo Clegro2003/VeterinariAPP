@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="ConsultaVeterinariaGUI.cs" />
     <Compile Include="MascotaGUI.cs" />
+    <Compile Include="MenuPopietario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="MenuPrincipal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

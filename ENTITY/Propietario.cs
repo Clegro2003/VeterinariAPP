@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ENTITY
 {
     public class Propietario : Persona
     {
-        public int Cedula { get; set; }
-        public string Telefono { get; set; }
-
         public Propietario() { }
 
-        public Propietario(string nombre, int cedula, string telefono)
+        public Propietario(string nombre, int cedula, int telefono)
         {
             Nombre = nombre;
             Cedula = cedula;
             Telefono = telefono;
         }
 
-        public override string NombreCompleto()
+        public override string ToString()
         {
-            return $"sr {Nombre} {Apellido}";
+            return $"{Cedula}; {Nombre}; {Apellido}; {Telefono}";
         }
     }
 }

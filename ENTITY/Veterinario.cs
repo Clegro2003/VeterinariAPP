@@ -24,9 +24,9 @@ namespace ENTITY
             Especialidad = especialidad;
         }
 
-        public override string NombreCompleto()
+        public override string ToString()
         {
-            return $"{Nombre}; {Apellido}";
+            return $"{Cedula}; {Nombre}; {Apellido}; {Especialidad}";
         }
     }
 }
